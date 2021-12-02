@@ -1,21 +1,9 @@
-from Tkinter import *
-import tkFont
+from tkinter import *
 
-win = Tk()
-
-myFont = tkFont.Font(family = 'Helvetica', size = 36, weight = 'bold')
-
-def exitProgram():
-	print("Exit Button pressed")
-	win.quit()
-
-win.title("First GUI")
-win.geometry('800x480')
-
-exitButton  = Button(win, text = "Exit", font = myFont, command = exitProgram, height =2 , width = 6) 
-exitButton.pack(side = BOTTOM)
-
-ledButton = Button(win, text = "LED ON", font = myFont, command = ledON, height = 2, width =8 )
-ledButton.pack()
-
-mainloop()
+root = Tk() # Fenster erstellen
+root.wm_title("Raspberry Pi GUI") # Fenster Titel
+root.config(background = "#FFFFFF") # Hintergrundfarbe des Fensters
+ 
+# Hier kommen die Elemente hin
+ 
+root.mainloop() # GUI wird upgedated. Danach keine Elemente setzen
