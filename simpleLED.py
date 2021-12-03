@@ -15,6 +15,9 @@ LED = 21
 
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(LED, GPIO.OUT)
-GPIO.output(LED, GPIO.HIGH)
+
+for i in range(5):
+    GPIO.output(20, GPIO.HIGH)
+    time.sleep(0.5)
+    GPIO.output(20, GPIO.LOW)
+    time.sleep(0.5)
