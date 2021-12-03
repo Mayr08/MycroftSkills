@@ -1,4 +1,6 @@
 import RPi.GPIO as GPIO
+import time
+
 LED = 21
 
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
@@ -15,6 +17,7 @@ LED = 21
 
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setup(20, GPIO.OUT)
 
 for i in range(5):
     GPIO.output(20, GPIO.HIGH)
